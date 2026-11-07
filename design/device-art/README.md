@@ -89,10 +89,12 @@ With `s = drawnHeight / 300` (surround SVGs are 300 tall), use `radius = (manife
 inset by `2 * s` (that's the body's outer edge). For Lightpad / Control Block (200-wide fixed SVGs), use radius 9, inset 4, `s = drawnWidth / 200`.
 Draw one border only, not a second outline on the tile bounds.
 
-### Open question
+### Fader thumbs (settled)
 
-The RISE photo shows the faders as a lit line with no thumb. The art keeps the `fader-thumb-*` live layer
-(GRAB moves it to show the value). Keep it, or drop it and show the value another way?
+The RISE photo shows the faders as a lit line with no thumb. The art keeps the `fader-thumb-0..2` and `xy-dot`
+live layers: GRAB moves them from the device's live performance MIDI and hides them when there's no live value,
+so the lit line shows at rest and a thumb appears when a fader moves. The RISE panel coordinates
+(thumbs at x 39.25 / 73.25 / 106.25, `xy-surface` at 32.2 / 161.2) match `KeyboardView`; keep them fixed.
 
 ## Regenerate
 
